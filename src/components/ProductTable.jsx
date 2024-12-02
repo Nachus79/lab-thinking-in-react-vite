@@ -8,13 +8,15 @@ function ProductTable({ products }) {
           <th>Name</th>
           <th>Price</th>
         </tr>
-        <tbody>
-          {products.map((product, index) => (
-            <ProductRow key={index} product={product} />
-          ))}
-        </tbody>
       </thead>
+      <tbody>
+        {products.map((product) => (
+          <ProductRow key={product.id} product={product} /> ))}
+      </tbody>
     </table>
   );
 }
+
 export default ProductTable;
+
+

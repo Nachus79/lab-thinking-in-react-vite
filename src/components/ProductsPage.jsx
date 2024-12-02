@@ -17,9 +17,10 @@ function ProductsPage() {
     <div>
       <h1>IronStore</h1>
       <SearchBar setProductsSearch={setProductsSearch} />  {/*BARRA DE BÚSQUEDA */}
-      <ProductTable products={searchFilter} />  {/*AQUÍ SE MOSTRARÁ LO QUE SE BUSQUE EN LA BARRA*/}
+      <ProductTable products={products} />  {/*AQUÍ SE MOSTRARÁ LO QUE SE BUSQUE EN LA BARRA*/}
     </div>
   );
 }
 
 export default ProductsPage;
+
