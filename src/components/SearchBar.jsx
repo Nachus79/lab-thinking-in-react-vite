@@ -3,8 +3,10 @@ function SearchBar({ setProductSearch }) {
     <div>
       <label>Seach</label>
       <br/>
-      <input type="text" onChange={(e) => setProductSearch(e.target.value)} />
+      <input type="text" onChange={(event) => setProductSearch(event.target.value)}/>
     </div>
   );
 }
 export default SearchBar;
+
+

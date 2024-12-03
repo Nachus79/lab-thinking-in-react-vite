@@ -13,14 +13,19 @@ function ProductsPage() {
     product.name.toLowerCase().includes(productsSearch.toLowerCase())
   ); /*FUNCIÓN PARA BUSCAR EN EL ARCHIVO DATA.JSON */
 
+  const handleSearch = (event) => {
+    setProductsSearch(event.target.value);
+  };
+
   return (
     <div>
       <h1>IronStore</h1>
-      <SearchBar setProductsSearch={setProductsSearch} />  {/*BARRA DE BÚSQUEDA */}
-      <ProductTable products={products} />  {/*AQUÍ SE MOSTRARÁ LO QUE SE BUSQUE EN LA BARRA*/}
+      <SearchBar setProductSearch={setProductsSearch} />
+      {/*BARRA DE BÚSQUEDA */}
+      <ProductTable products={searchFilter} />{" "}
+      {/*AQUÍ SE MOSTRARÁ LO QUE SE BUSQUE EN LA BARRA*/}
     </div>
   );
 }
 
 export default ProductsPage;
-
